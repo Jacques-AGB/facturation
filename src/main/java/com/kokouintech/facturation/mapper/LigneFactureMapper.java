@@ -1,4 +1,4 @@
-package com.kokouintech.facturation.Mapper;
+package com.kokouintech.facturation.mapper;
 
 import com.kokouintech.facturation.dto.LigneFactureDto;
 import com.kokouintech.facturation.models.Facture;
@@ -8,10 +8,10 @@ public class LigneFactureMapper {
 
     public static LigneFacture toLigneFacture(LigneFactureDto dto, Facture facture){
         LigneFacture ligneFacture = new LigneFacture();
-        ligneFacture.setDescription(dto.getDescription());
-        ligneFacture.setQuantite(dto.getQuantite());
-        ligneFacture.setPrixUnitaireHT(dto.getPrixUnitaireHT());
-        ligneFacture.setTauxTVA(dto.getTauxTVA());
+        ligneFacture.setDescription(dto.description());
+        ligneFacture.setQuantite(dto.quantite());
+        ligneFacture.setPrixUnitaireHT(dto.prixUnitaireHT());
+        ligneFacture.setTauxTVA(dto.tauxTVA());
         ligneFacture.setFacture(facture);
         return ligneFacture;
     }

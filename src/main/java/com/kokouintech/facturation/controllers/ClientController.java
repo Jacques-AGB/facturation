@@ -1,4 +1,4 @@
-package com.kokouintech.facturation.Controllers;
+package com.kokouintech.facturation.controllers;
 
 import com.kokouintech.facturation.dto.ClientDto;
 import com.kokouintech.facturation.models.Client;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("client")
+@RequestMapping("/clients")
 public class ClientController {
 
     private final ClientService clientService;
@@ -19,7 +19,7 @@ public class ClientController {
         this.clientService = clientService;
     }
 
-    @PostMapping("/create")
+    @PostMapping
     public ResponseEntity<String> createClient(@RequestBody ClientDto clientDto){
         return new ResponseEntity<>(clientService.createClient(clientDto),HttpStatus.CREATED);
     }

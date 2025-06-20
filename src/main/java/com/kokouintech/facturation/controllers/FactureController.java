@@ -1,12 +1,9 @@
-package com.kokouintech.facturation.Controllers;
+package com.kokouintech.facturation.controllers;
 
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
-import com.kokouintech.facturation.dto.ClientDto;
 import com.kokouintech.facturation.dto.FactureDto;
-import com.kokouintech.facturation.models.Client;
 import com.kokouintech.facturation.models.Facture;
-import com.kokouintech.facturation.services.implementations.ClientService;
 import com.kokouintech.facturation.services.implementations.FactureService;
 import com.kokouintech.facturation.services.implementations.PDFService;
 import org.springframework.http.HttpStatus;
@@ -17,7 +14,7 @@ import java.io.FileNotFoundException;
 import java.util.List;
 
 @RestController
-@RequestMapping("facture")
+@RequestMapping("/factures")
 public class FactureController {
     private final FactureService factureService;
     private final PDFService pdfService;
@@ -27,12 +24,12 @@ public class FactureController {
         this.pdfService = pdfService;
     }
 
-    @PostMapping("/create")
+    @PostMapping
     public ResponseEntity<String> createFacture(@RequestBody FactureDto factureDto){
         return new ResponseEntity<>(factureService.createFacture(factureDto), HttpStatus.CREATED);
     }
 
-    @PostMapping("/generate/{id}")
+    @PostMapping("/{id}/pdf")
     public ResponseEntity<Document> generateFacture(@PathVariable Long id) throws DocumentException, FileNotFoundException {
         return new ResponseEntity<Document>(pdfService.generateFacture(id), HttpStatus.CREATED);
     }

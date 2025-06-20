@@ -1,20 +1,15 @@
 package com.kokouintech.facturation.services.implementations;
 
-import com.kokouintech.facturation.Mapper.FactureMapper;
-import com.kokouintech.facturation.Mapper.LigneFactureMapper;
-import com.kokouintech.facturation.dto.FactureDto;
+import com.kokouintech.facturation.mapper.LigneFactureMapper;
 import com.kokouintech.facturation.dto.LigneFactureDto;
-import com.kokouintech.facturation.models.Client;
 import com.kokouintech.facturation.models.Facture;
 import com.kokouintech.facturation.models.LigneFacture;
-import com.kokouintech.facturation.repositories.ClientRepository;
 import com.kokouintech.facturation.repositories.FactureRepository;
 import com.kokouintech.facturation.repositories.LigneFactureRepository;
 import com.kokouintech.facturation.services.interfaces.ILigneFactureService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class LigneFactureService implements ILigneFactureService {
@@ -29,7 +24,7 @@ public class LigneFactureService implements ILigneFactureService {
     @Override
     public String createLigneFacture(LigneFactureDto ligneFactureDto) {
 
-        Facture facture = factureRepository.findById(ligneFactureDto.getFactureId()).orElseThrow(() ->new RuntimeException ("Facture non trouvé"));
+        Facture facture = factureRepository.findById(ligneFactureDto.factureId()).orElseThrow(() ->new RuntimeException ("Facture non trouvé"));
         LigneFacture ligneFacture = LigneFactureMapper.toLigneFacture(ligneFactureDto, facture);
         ligneFactureRepository.save(ligneFacture);
 

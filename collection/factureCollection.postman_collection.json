@@ -17,7 +17,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"nom\": \"KkouInTech SARL\",\r\n  \"email\": \"contact@kokouintech.fr\",\r\n  \"siret\": \"82345678900012\"\r\n}\r\n",
+							"raw": "{\r\n  \"nom\": \"KokouInTech SARL\",\r\n  \"email\": \"contact@kokouintech.fr\",\r\n  \"siret\": \"82345678900012\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -25,15 +25,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/client/create",
+							"raw": "http://localhost:8080/clients",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"client",
-								"create"
+								"clients"
 							]
 						}
 					},
@@ -45,14 +44,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/client",
+							"raw": "http://localhost:8080/clients",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"client"
+								"clients"
 							]
 						}
 					},
@@ -64,14 +63,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/client/1",
+							"raw": "http://localhost:8080/clients/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"client",
+								"clients",
 								"1"
 							]
 						}
@@ -98,15 +97,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/facture/create",
+							"raw": "http://localhost:8080/factures",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"facture",
-								"create"
+								"factures"
 							]
 						}
 					},
@@ -118,16 +116,16 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/facture/generate/1",
+							"raw": "http://localhost:8080/factures/1/pdf",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"facture",
-								"generate",
-								"1"
+								"factures",
+								"1",
+								"pdf"
 							]
 						}
 					},
@@ -139,14 +137,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/facture",
+							"raw": "http://localhost:8080/factures",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"facture"
+								"factures"
 							]
 						}
 					},
@@ -158,14 +156,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/facture/1",
+							"raw": "http://localhost:8080/factures/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"facture",
+								"factures",
 								"1"
 							]
 						}
@@ -184,7 +182,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"description\": \"Déploiement d'un SaaS\",\r\n  \"quantite\": 3,\r\n  \"prixUnitaireHT\": 500.00,\r\n  \"tauxTVA\": \"TVA_4\",\r\n  \"factureId\": 1\r\n}\r\n",
+							"raw": "{\r\n  \"description\": \"Cahier de charges\",\r\n  \"quantite\": 2,\r\n  \"prixUnitaireHT\": 300.00,\r\n  \"tauxTVA\": \"TVA_4\",\r\n  \"factureId\": 1\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -192,15 +190,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/ligneFacture/create",
+							"raw": "http://localhost:8080/ligneFactures",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"ligneFacture",
-								"create"
+								"ligneFactures"
 							]
 						}
 					},
@@ -212,14 +209,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/ligneFacture",
+							"raw": "http://localhost:8080/ligneFactures",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"ligneFacture"
+								"ligneFactures"
 							]
 						}
 					},
@@ -231,14 +228,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/ligneFacture/1",
+							"raw": "http://localhost:8080/ligneFactures/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"ligneFacture",
+								"ligneFactures",
 								"1"
 							]
 						}

@@ -1,7 +1,6 @@
 package com.kokouintech.facturation.services.implementations;
 
-import com.itextpdf.text.Document;
-import com.kokouintech.facturation.Mapper.FactureMapper;
+import com.kokouintech.facturation.mapper.FactureMapper;
 import com.kokouintech.facturation.dto.FactureDto;
 import com.kokouintech.facturation.models.Client;
 import com.kokouintech.facturation.models.Facture;
@@ -25,12 +24,12 @@ public class FactureService implements IFactureService {
 
     @Override
     public String createFacture(FactureDto factureDto) {
-        Optional<Facture> existingFacture = factureRepository.findByReference(factureDto.getReference());
+        Optional<Facture> existingFacture = factureRepository.findByReference(factureDto.reference());
         if(existingFacture.isPresent())
         {
             throw new RuntimeException("Le facture avec id "+existingFacture.get().getId()+ "existe déjà");
         }
-        Client client = clientRepository.findById(factureDto.getClientId()).orElseThrow(() ->new RuntimeException ("Client non trouvé"));
+        Client client = clientRepository.findById(factureDto.clientId()).orElseThrow(() ->new RuntimeException ("Client non trouvé"));
         Facture facture = FactureMapper.toFacture(factureDto, client);
         factureRepository.save(facture);
         return "Le Facture "+ facture.getId() +"a été Créé avec succès";

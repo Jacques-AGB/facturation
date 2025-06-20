@@ -1,4 +1,4 @@
-package com.kokouintech.facturation.Mapper;
+package com.kokouintech.facturation.mapper;
 
 import com.kokouintech.facturation.dto.ClientDto;
 import com.kokouintech.facturation.models.Client;
@@ -9,9 +9,9 @@ public class ClientMapper {
 
     public static Client toClient(ClientDto dto){
         Client client = new Client();
-        client.setNom(dto.getNom());
-        client.setEmail(dto.getEmail());
-        client.setSiret(dto.getSiret());
+        client.setNom(dto.nom());
+        client.setEmail(dto.email());
+        client.setSiret(dto.siret());
         client.setDateCreation(LocalDate.now());
         return client;
     }

@@ -1,4 +1,4 @@
-package com.kokouintech.facturation.Controllers;
+package com.kokouintech.facturation.controllers;
 
 import com.kokouintech.facturation.dto.LigneFactureDto;
 import com.kokouintech.facturation.models.LigneFacture;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("ligneFacture")
+@RequestMapping("/ligneFactures")
 public class LigneFactureController {
     private final LigneFactureService ligneFactureService;
 
@@ -18,7 +18,7 @@ public class LigneFactureController {
         this.ligneFactureService = ligneFactureService;
     }
 
-    @PostMapping("/create")
+    @PostMapping
     public ResponseEntity<String> createLigneFacture(@RequestBody LigneFactureDto ligneFactureDto){
         return new ResponseEntity<>(ligneFactureService.createLigneFacture(ligneFactureDto), HttpStatus.CREATED);
     }

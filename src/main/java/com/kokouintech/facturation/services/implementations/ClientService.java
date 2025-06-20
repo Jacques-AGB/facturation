@@ -1,6 +1,6 @@
 package com.kokouintech.facturation.services.implementations;
 
-import com.kokouintech.facturation.Mapper.ClientMapper;
+import com.kokouintech.facturation.mapper.ClientMapper;
 import com.kokouintech.facturation.dto.ClientDto;
 import com.kokouintech.facturation.models.Client;
 import com.kokouintech.facturation.repositories.ClientRepository;
@@ -21,7 +21,7 @@ public class ClientService implements IClientService {
     @Override
     public String createClient(ClientDto clientDto) {
         System.out.println(clientDto);
-        Optional<Client> existingClient = clientRepository.findByEmail(clientDto.getEmail());
+        Optional<Client> existingClient = clientRepository.findByEmail(clientDto.email());
         if(existingClient.isPresent())
         {
             throw new RuntimeException("Le client avec id "+existingClient.get().getId()+ "existe déjà");

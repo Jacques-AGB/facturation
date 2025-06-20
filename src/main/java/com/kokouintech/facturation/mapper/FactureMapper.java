@@ -1,4 +1,4 @@
-package com.kokouintech.facturation.Mapper;
+package com.kokouintech.facturation.mapper;
 
 import com.kokouintech.facturation.dto.FactureDto;
 import com.kokouintech.facturation.models.Client;
@@ -12,7 +12,7 @@ public class FactureMapper {
         Facture facture = new Facture();
         facture.setDate(LocalDate.now());
         facture.setClient(client);
-        facture.setReference(dto.getReference());
+        facture.setReference(dto.reference());
         return facture;
     }
 
