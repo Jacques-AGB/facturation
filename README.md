@@ -4,6 +4,8 @@ Ce projet est un mini-module de facturation RESTful développé en **Java 17** a
 
 ![Facture image](img/Capture.PNG)
 
+##Collection Postman ( Il sera dans le dossier collection )
+![Collection postman image](img/Collection.PNG)
 
 ## 🚀 Fonctionnalités principales
 
