@@ -44,7 +44,7 @@ Ce projet est un mini-module de facturation RESTful développé en **Java 17** a
 
 ### A faire
 - Endpoint pour retourner une facture complète au format JSON structuré
-- 🔐 Authentification basique avec Spring Security (in-memory)
+- 🔐 Authentification basique avec Spring Security 
 - ✅ Tests unitaires sur les services métiers
 
 
