@@ -1,6 +1,6 @@
 # 🧾 Module de Facturation – Java / Spring Boot
 
-Ce projet est un mini-module de facturation RESTful développé en **Java 17** avec **Spring Boot 3.5.2 Il permet de gérer les clients, d’émettre des factures avec calculs automatiques, et d’exporter les factures au format JSON.
+Ce projet est un mini-module de facturation RESTful développé en **Java 17** avec **Spring Boot 3.5.2**. Il permet de gérer les clients, d’émettre des factures avec calculs automatiques, et d’exporter les factures au format JSON.
 
 ![Facture image](img/Capture.PNG)
 
