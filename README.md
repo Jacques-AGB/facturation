@@ -37,8 +37,6 @@ Ce projet est un mini-module de facturation RESTful développé en **Java 17** a
 - itexttpdf
 - PostgreSQL
 - Lombok
-- Swagger (OpenAPI)
-- JUnit 5
 
 ### Lancer l'application
 
